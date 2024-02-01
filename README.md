@@ -88,7 +88,7 @@ Ofcourse it also support nested loops:
 			show_message($"_char: {_char}, __elem: {__elem}");
 		}
 ```
-just be aware __elem and __index always refer to the deepest loop.
+just be aware __elem and __index have the value of whichever loop their are written in.
 
 
 Now we get to the biggest weakness of the system, returning from within a foreach loop.
