@@ -1,9 +1,10 @@
 # 8BitKings-Foreach
 Foreach macros in gamemaker.
 
-This script provides macros that archive a foreach behaviour in GML
-It supports ```break``` and ```continue``` and its variable scope is just like in any other loop, unlike many foreach implementations based on functions.
-The code you write in the foreach block is actually inside a forloop so it behaves as you would expect, except with return but more on that later.
+This script provides macros that archive a foreach behaviour in GML.
+
+It supports ```break``` and ```continue``` and it the scope of the codeblock is just like in any other loop, unlike many foreach implementations based on functions.
+The code you write in the foreach code block is actually inside a forloop cod block so it behaves as you would expect, except with ```return``` but more on that later.
 
 I was inspired to do this after I read this fabulous [Blogpost](https://www.katsaii.com/content/blog/post/gml+syntax+extensions.html) by katsaii. Give it a read especially if you want to understand how this works in detail.
 
