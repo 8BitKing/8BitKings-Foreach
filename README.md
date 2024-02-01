@@ -67,7 +67,7 @@ Then there is lists and structs:
 As you can see I implemented ```__elem``` to look like this ``` {name, value} ```. I think its debateable how to implement this but it really is a super simple change in the code if you want something else.
 Also you have no control about the order in which this gets iterated, its dependend on the order of whatever ```struct_get_names()``` returns. 
 
-Ofcourse it also support nested loops:
+Ofcourse it also supports nested loops:
 
 ```
 		var _array = [2,1];
@@ -88,7 +88,7 @@ Ofcourse it also support nested loops:
 			show_message($"_char: {_char}, __elem: {__elem}");
 		}
 ```
-just be aware __elem and __index have the value of whichever loop their are written in.
+just be aware ```__elem``` and ```__index``` have the value of whichever loop their are written in.
 
 
 Now we get to the biggest weakness of the system, returning from within a foreach loop.
@@ -101,9 +101,9 @@ Now we get to the biggest weakness of the system, returning from within a foreac
 			}
 		}
 ```
-As you can see this is done with yet another macro "FEreturn".
-You can use this macro just as you would return except you cannot FEreturn nothing, you have to be explicit: ``` return; ``` => ``` FEreturn undefined; ```.
-If you just use return the stack used to keep track of nested loops does not get updated and your game can crash or memory leak. This is the biggest weakness of the system and maybe someone clever can figure out how to avoid it.
+As you can see this is done with yet another macro ```FEreturn```.
+You can use this macro just as you would ```return``` except you cannot ```FEreturn``` nothing, you have to be explicit: ``` return; ``` => ``` FEreturn undefined; ```.
+If you just use ```return``` the stack used to keep track of nested loops does not get updated and your game can crash. This is the biggest weakness of the system and maybe someone clever can figure out how to avoid it.
 
 There is another detail, that if missed could cause some headaches:
 ```
